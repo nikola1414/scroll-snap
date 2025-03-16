@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    scroll-snap-align: start;
+}
+
+.red { background: red; }
+.blue { background: blue; }
+.green { background: green; }
+.orange { background: orange; }
