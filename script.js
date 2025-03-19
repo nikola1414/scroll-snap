@@ -5,7 +5,7 @@ function snapToSection(direction) {
     if (isScrolling) return;
 
     const sections = document.querySelectorAll(".section");
-    let threshold = window.innerWidth <= 768 ? 0.7 : 0.85; 
+    let threshold = window.innerWidth <= 768 ? 0.8 : 0.80; 
     let targetSection = null;
 
     sections.forEach((section) => {
