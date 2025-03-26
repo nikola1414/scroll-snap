@@ -12,7 +12,7 @@ body {
 
 .section {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,3 +26,56 @@ body {
 .blue { background: blue; height: 1400px; }
 .green { background: green; }
 .orange { background: orange; }
+
+.nav-menu {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: rgba(240, 240, 240, 0.9);
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.nav-title {
+    position: absolute;
+    right: 50px;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+    white-space: nowrap;
+}
+
+.nav-item:hover .nav-title {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.nav-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: lightgray;
+    transition: background 0.3s ease;
+}
+
+.nav-item:hover .nav-circle {
+    background: darkgray;
+}
+
+.nav-item.active .nav-circle {
+    background: blue;
+}
